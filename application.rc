@@ -1,0 +1,72 @@
+#if defined(UNDER_CE)
+	#include <winbase.h>
+#else
+	#include <winver.h>
+#endif
+
+// 图标
+IDI_ICON1 ICON DISCARDABLE "/hhtc.ico"
+IDI_ICON2 ICON DISCARDABLE "/dqy.ico"
+IDI_ICON3 ICON DISCARDABLE "/tjb.ico"
+IDI_ICON4 ICON DISCARDABLE "/tjb2.ico"
+
+// 资源信息
+#define FILE_NAME "entry.exe"
+#define VERSION_VARIABLE 1,7,26,0
+#define VERSION_STRING  "1.7.26.0"
+
+#define BRAIN_WATER 0
+#if BRAIN_WATER
+#define VERSION_VALUE1 1
+#define VERSION_VALUE2 7
+#define VERSION_VALUE3 24
+#define VERSION_VALUE4 0
+
+// 一些坑爹的东西
+#define EXPAND_MACRO(str) _MARCO_STRING(str)
+#define MARCO_STRING(str) #str
+#define VERSION_NOQUOTATION VERSION_VALUE1.VERSION_VALUE2.VERSION_VALUE3.VERSION_VALUE4
+#define VERSION_VARIABLE VERSION_VALUE1,VERSION_VALUE2,VERSION_VALUE3,VERSION_VALUE4
+#define VERSION_STRING EXPAND_MACRO(VERSION_NOQUOTATION)
+#endif
+
+// 版本信息
+VS_VERSION_INFO VERSIONINFO
+// 文件版本, 须定义
+	FILEVERSION VERSION_VARIABLE
+// 产品版本
+	PRODUCTVERSION VERSION_VARIABLE
+// 文件标志掩码
+    FILEFLAGSMASK 0x3fL
+// 文件标志
+#ifdef _DEBUG
+    FILEFLAGS VS_FF_DEBUG
+#else
+    FILEFLAGS 0x0L
+#endif
+// 文件操作系统
+    FILEOS VOS_NT
+// 文件类型
+    FILETYPE VFT_APP
+// 文件子类型
+    FILESUBTYPE 0x0L
+    BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "080404b0"
+            BEGIN
+                VALUE "CompanyName", "破濒科技"
+				VALUE "FileDescription", "408 电子工作室 上位机"
+                VALUE "ProductName", "上位机"
+				VALUE "FileVersion", VERSION_STRING
+				VALUE "ProductVersion", VERSION_STRING
+				VALUE "LegalCopyright", "Copyright (C) 2021 408 Electronic Studio"
+				VALUE "InternalName", FILE_NAME
+				VALUE "OriginalFilename", FILE_NAME
+            END
+        END
+        BLOCK "VarFileInfo"
+        BEGIN
+            VALUE "Translation", 0x804, 1200
+        END
+	END

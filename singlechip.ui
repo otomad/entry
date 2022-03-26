@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SingleChip</class>
+ <widget class="QWidget" name="SingleChip">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>494</width>
+    <height>468</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-99</y>
+        <width>480</width>
+        <height>567</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,1">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>设定</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,1,0" columnminimumwidth="50,0,90">
+          <property name="horizontalSpacing">
+           <number>9</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="setBeep">
+            <property name="text">
+             <string>设定</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,1">
+            <property name="horizontalSpacing">
+             <number>9</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="enableBeepTime">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>持续时间</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="enableBeep">
+              <property name="text">
+               <string>蜂鸣</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSpinBox" name="beepHzBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="beepMsBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string> ms</string>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>流水灯</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="setDigit">
+            <property name="text">
+             <string>设定</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>数码管</string>
+            </property>
+            <property name="buddy">
+             <cstring>ledBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>蜂鸣器</string>
+            </property>
+            <property name="buddy">
+             <cstring>beepHzBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="ledBox"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>按钮</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="s1">
+              <property name="text">
+               <string>S&amp;1</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="s2">
+              <property name="text">
+               <string>S&amp;2</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="s3">
+              <property name="text">
+               <string>S&amp;3</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="s4">
+              <property name="text">
+               <string>S&amp;4</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QCheckBox" name="l1">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l2">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l3">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l4">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l5">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l6">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l7">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="l8">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>读取</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,1,0">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>读取参数</string>
+            </property>
+            <property name="buddy">
+             <cstring>readValue</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="curValueText">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="readValue">
+            <property name="minimumSize">
+             <size>
+              <width>90</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>读取</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>奇淫技巧</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,0" columnminimumwidth="50,0,90">
+          <property name="verticalSpacing">
+           <number>9</number>
+          </property>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>滚动速度</string>
+              </property>
+              <property name="buddy">
+               <cstring>scrollSpeedBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="scrollSpeedBox">
+              <property name="suffix">
+               <string> 毫秒每字</string>
+              </property>
+              <property name="maximum">
+               <number>2000</number>
+              </property>
+              <property name="singleStep">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>500</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <widget class="QTextEdit" name="notesBox"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTextEdit" name="scrollLedBox"/>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,1,0,0,1">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>1 =</string>
+              </property>
+              <property name="buddy">
+               <cstring>mainKeyBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="mainKeyBox">
+              <item>
+               <property name="text">
+                <string notr="true">C</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">C#</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">D</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">D#</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">E</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">F</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">F#</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">G</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">G#</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">A</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">A#</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">B</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>BPM =</string>
+              </property>
+              <property name="buddy">
+               <cstring>bpmBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="bpmBox">
+              <property name="minimum">
+               <number>30</number>
+              </property>
+              <property name="maximum">
+               <number>400</number>
+              </property>
+              <property name="value">
+               <number>120</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0" rowspan="2">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>滚动字幕</string>
+            </property>
+            <property name="buddy">
+             <cstring>scrollLedBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" rowspan="2">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>播放乐谱</string>
+            </property>
+            <property name="buddy">
+             <cstring>notesBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" rowspan="2">
+           <widget class="QPushButton" name="setScrollLed">
+            <property name="text">
+             <string>启动</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2" rowspan="2">
+           <widget class="QPushButton" name="setPlayNotes">
+            <property name="text">
+             <string>启动</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>l1</tabstop>
+  <tabstop>l2</tabstop>
+  <tabstop>l3</tabstop>
+  <tabstop>l4</tabstop>
+  <tabstop>l5</tabstop>
+  <tabstop>l6</tabstop>
+  <tabstop>l7</tabstop>
+  <tabstop>l8</tabstop>
+  <tabstop>ledBox</tabstop>
+  <tabstop>setDigit</tabstop>
+  <tabstop>enableBeep</tabstop>
+  <tabstop>beepHzBox</tabstop>
+  <tabstop>enableBeepTime</tabstop>
+  <tabstop>beepMsBox</tabstop>
+  <tabstop>setBeep</tabstop>
+  <tabstop>s1</tabstop>
+  <tabstop>s2</tabstop>
+  <tabstop>s3</tabstop>
+  <tabstop>s4</tabstop>
+  <tabstop>curValueText</tabstop>
+  <tabstop>readValue</tabstop>
+  <tabstop>scrollSpeedBox</tabstop>
+  <tabstop>scrollLedBox</tabstop>
+  <tabstop>setScrollLed</tabstop>
+  <tabstop>mainKeyBox</tabstop>
+  <tabstop>bpmBox</tabstop>
+  <tabstop>notesBox</tabstop>
+  <tabstop>setPlayNotes</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>enableBeep</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>beepHzBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>3</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableBeepTime</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>beepMsBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>357</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableBeep</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>enableBeepTime</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>-6</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

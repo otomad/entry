@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/led/html" lang="html">
+        <file>DS-DIGI.TTF</file>
+        <file>index.html</file>
+        <file>index.css</file>
+        <file>index.jsx</file>
+    </qresource>
+</RCC>

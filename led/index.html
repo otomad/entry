@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+	<title>计算数码管值</title>
+	<!-- <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="index.css"> -->
+	<link rel="stylesheet" href="qrc:/led/html/index.css">
+<style></style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="led">
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="led2"></div>
+			<div class="dot"></div>
+		</div>
+		<div id="message">
+			<div class="link">
+				<select id="method">
+					<option value="0" selected>共阳极，从低到高</option>
+					<option value="1">共阴极，从低到高</option>
+					<option value="2">共阳极，从高到低</option>
+					<option value="3">共阴极，从高到低</option>
+				</select>
+			</div>
+			<p id="info">点击数码管更改颜色</p>
+			<p>二进制：<span id="binary">0b11111111</span></p>
+			<p>十六进制：<span id="hexadecimal">0xff</span></p>
+		</div>
+	</div>
+
+	<!-- <script type="text/javascript" src="index.jsx"></script> -->
+	<script type="text/javascript" src="qrc:/led/html/index.jsx"></script> <!-- QT Release 编译时会有把 js 文件额外编译了的干位操作。 -->
+	<script></script>
+</body>
+
+</html>

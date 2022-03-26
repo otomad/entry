@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
+	font-family: Digital, "Segoe UI", "Microsoft Yahei UI", sans-serif;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+:root {
+	--light-on: #64c7cc;
+	--light-off: #80869233; /* #333642 */
+	--background: #1d1f20;
+	--led-width: 150px;
+	--led-height: 15px;
+	--rotate: rotate(90deg);
+	--gap: 5px;
+	--margin: 100px;
+	--width: 180px; /*兼容问题*/
+	--height: 30px; /*兼容问题*/
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	/* background-color: var(--background); */
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	transform: scale(1);
+}
+
+.container > * {
+	flex-shrink: 0;
+}
+
+#led {
+	/*--height: calc(var(--led-height) * 2);
+	--width: calc(var(--led-width) + var(--height));*/ /*兼容问题*/
+	position: relative;
+	width: calc(var(--led-width) + var(--led-height) * 2);
+	height: calc(var(--led-height) * 6 + var(--gap) * 4 + var(--led-width) * 2);
+	margin: 0 calc(var(--led-height) * 3);
+}
+
+#led.skew {
+	transform: skewX(-10deg);
+}
+
+.led {
+	width: var(--width);
+	height: var(--height);
+	position: absolute;
+}
+
+.led::before,
+.led::after {
+	content: "";
+	display: block;
+	width: var(--led-width);
+	border: var(--led-height) solid transparent;
+	box-sizing: content-box;
+	position: relative;
+}
+
+.led::before {
+	border-bottom-color: var(--light);
+}
+
+.led::after {
+	border-top-color: var(--light);
+}
+
+.led:nth-of-type(2),
+.led:nth-of-type(3),
+.led:nth-of-type(5),
+.led:nth-of-type(6) {
+	display: flex;
+	height: var(--width);
+	width: var(--height);
+}
+
+.led:nth-of-type(2)::before,
+.led:nth-of-type(3)::before,
+.led:nth-of-type(5)::before,
+.led:nth-of-type(6)::before,
+.led:nth-of-type(2)::after,
+.led:nth-of-type(3)::after,
+.led:nth-of-type(5)::after,
+.led:nth-of-type(6)::after {
+	width: 0;
+	height: var(--led-width);
+	border-color: transparent;
+	border-right-color: var(--light);
+}
+
+.led:nth-of-type(2)::after,
+.led:nth-of-type(3)::after,
+.led:nth-of-type(5)::after,
+.led:nth-of-type(6)::after {
+	border-color: transparent;
+	border-left-color: var(--light);
+}
+
+.led:nth-of-type(2),
+.led:nth-of-type(3) {
+	/* transform: translate(calc(var(--led-width) + var(--gap)), var(--gap)); */
+	left: calc(var(--led-width) + var(--gap));
+}
+
+.led:nth-of-type(2),
+.led:nth-of-type(6) {
+	top: calc(var(--led-height) * 2 + var(--gap));
+}
+
+.led:nth-of-type(3),
+.led:nth-of-type(5) {
+	top: calc(var(--led-height) * 4 + var(--gap) * 3 + var(--led-width));
+}
+
+.led:nth-of-type(5),
+.led:nth-of-type(6) {
+	left: calc(0px - var(--led-height) * 2 - var(--gap));
+}
+.led:nth-of-type(4) {
+	top: calc(var(--led-height) * 4 + var(--gap) * 4 + var(--led-width) * 2);
+}
+
+.led:nth-of-type(7) {
+	top: calc(var(--led-height) * 2 + var(--gap) * 2 + var(--led-width));
+}
+
+.dot {
+	--size: calc(var(--led-height) * 2);
+	width: var(--size);
+	height: var(--size);
+	background-color: var(--light);
+	position: absolute;
+	top: calc(var(--led-height) * 4 + var(--gap) * 5 + var(--led-width) * 2);
+	left: calc(var(--led-width) + var(--gap) + var(--led-height) * 3);
+	border-radius: 100%;
+}
+
+.led,
+.dot,
+.led2 {
+	--light: var(--light-off);
+	cursor: pointer;
+}
+
+.led.light,
+.dot.light,
+.led2.light {
+	--light: var(--light-on);
+}
+
+@font-face {
+	font-family: Digital;
+	src: url(./DS-DIGI.TTF);
+}
+
+#binary,
+#hexadecimal {
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+#message,
+#method {
+	color: var(--light-on);
+	font-size: 64px;
+	-webkit-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+}
+
+#message {
+	margin-left: 60px;
+	line-height: 1.65em;
+}
+
+#method {
+	padding: 0; /* 5px */
+	height: 74px;
+	box-sizing: content-box;
+	border: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='15'%3e%3cpath fill='%2364c7cc' d='M1.07464 0 12 10.863 22.9254 0 24 1.0685 12 13 0 1.0685Z'/%3e%3c/svg%3e") no-repeat scroll right center transparent;
+	/* background-color: var(--background); */
+	padding-right: 0.65em;
+	cursor: pointer;
+	background-position-y: center;
+	border-right: 20px solid transparent;
+	transition: all 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+#method:active {
+	background-position-y: 65%;
+	/*background-color: var(--background);
+	transition: all 250ms cubic-bezier(0, 0, 0.2, 1), background-color 0ms;*/
+	animation: select-fix 0.5s;
+}
+
+@keyframes select-fix {
+	0% {
+		background-color: var(--background);
+	}
+	100% {
+		background-color: #1d1f2000;
+	}
+}
+
+#info {
+	cursor: pointer;
+}
+
+#info:hover {
+	opacity: 0.35;
+}
+
+/* .select-triangle::after {
+	content: '\2335';
+	margin-left: 0.5em;
+} */
+
+.link {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	display: block;
+}
+
+.link::before {
+	content: "Lorem ibsum dolor Lorem ibsum dolor";
+	position: absolute;
+	color: transparent;
+	white-space: nowrap;
+	text-decoration: underline wavy transparent 4px;
+	text-underline-offset: 10px;
+	z-index: -1;
+	top: 1.25em;
+	width: 200%;
+	height: 0.14em;
+	background:
+		linear-gradient(135deg, transparent, transparent 45%, var(--light-on), transparent 55%, transparent 100%),
+		linear-gradient(45deg, transparent, transparent 45%, var(--light-on), transparent 55%, transparent 100%);
+	background-size: 0.25em 0.25em;
+	background-repeat: repeat-x, repeat-x;
+	padding-right: 20px;
+	opacity: 0;
+}
+
+.link:hover::before {
+	animation: move 3s infinite linear;
+	text-decoration-color: var(--light-on);
+	opacity: 1;
+}
+
+@keyframes move {
+	0% {
+		transform: translate(0px, 0);
+	}
+	100% {
+		transform: translate(-197px, 0);
+	}
+}
+
+.led2 {
+	width: var(--width);
+	height: var(--height);
+	overflow: hidden;
+	position: absolute;
+}
+
+.led2::after {
+	content: "";
+	/*--size: calc(var(--width) / 1.414);*/ /*兼容问题*/
+	--size: 127.28px;
+	width: var(--size);
+	height: var(--size);
+	background-color: var(--light);
+	display: block;
+	/*--half-width: calc(var(--width) / 2);
+	--half-height: calc(var(--height) / 2);*/  /*兼容问题*/
+	--half-width: 90px;
+	--half-height: 15px;
+	-webkit-transform: rotate(45deg);
+	transform: translate(var(--half-width), calc(0px - var(--half-width) + var(--half-height))) rotate(45deg);
+	transform-origin: left top;
+}
+
+.led2:nth-of-type(2),
+.led2:nth-of-type(3),
+.led2:nth-of-type(5),
+.led2:nth-of-type(6) {
+	transform: rotate(90deg);
+	transform-origin: left center;
+}
+
+.led2:nth-of-type(2),
+.led2:nth-of-type(3) {
+	left: calc(var(--width) + var(--gap));
+}
+
+.led2:nth-of-type(5),
+.led2:nth-of-type(6) {
+	left: calc(0px - var(--gap));
+}
+
+.led2:nth-of-type(2),
+.led2:nth-of-type(6) {
+	top: var(--gap);
+}
+
+.led2:nth-of-type(3),
+.led2:nth-of-type(5) {
+	top: calc(var(--width) + var(--gap) * 3);
+}
+
+.led2:nth-of-type(4) {
+	top: calc(var(--width) * 2 + var(--gap) * 4);
+}
+
+.led2:nth-of-type(7) {
+	top: calc(var(--width) + var(--gap) * 2);
+}

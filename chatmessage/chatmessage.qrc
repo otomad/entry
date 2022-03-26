@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/chatmessage">
+        <file>img/customer.png</file>
+        <file>img/service.png</file>
+        <file>img/loading.gif</file>
+        <file>img/customer_default.png</file>
+        <file>img/service_default.png</file>
+    </qresource>
+</RCC>

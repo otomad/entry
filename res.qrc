@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/icon" lang="x-icon">
+        <file>tjb.ico</file>
+        <file>tjb2.ico</file>
+        <file>hhtc.ico</file>
+        <file>dqy.ico</file>
+    </qresource>
+    <qresource prefix="/qss" lang="qss">
+        <file>stylesheet.qss</file>
+    </qresource>
+    <qresource prefix="/img" lang="jpg">
+        <file>vista.jpg</file>
+        <file>spectrum.jpg</file>
+        <file>distortion/DistortionBidirectional.png</file>
+        <file>distortion/DistortionCrossover.png</file>
+        <file>distortion/DistortionCutoff.png</file>
+        <file>distortion/DistortionNo.png</file>
+        <file>distortion/DistortionSaturation.png</file>
+        <file>408logo.png</file>
+        <file>tjb_img1.jpg</file>
+        <file>tjb_img2.jpg</file>
+        <file>tjb_img3.jpg</file>
+        <file>tjb_img4.jpg</file>
+    </qresource>
+    <qresource prefix="/help" lang="chm">
+        <file>entry_408es_help.chm</file>
+    </qresource>
+</RCC>

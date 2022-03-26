@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServerSetting</class>
+ <widget class="QDialog" name="ServerSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>695</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>参数设置</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabSetting">
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>6</number>
+     </property>
+     <widget class="QWidget" name="tabDatabaseServer">
+      <property name="whatsThis">
+       <string>设定登录系统时所访问的 MySQL 数据库。</string>
+      </property>
+      <attribute name="title">
+       <string>数据库服务器</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="HostNameInput"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="UserNameInput"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="PortInput"/>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="DatabaseNameInput"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>数据库名称</string>
+         </property>
+         <property name="buddy">
+          <cstring>DatabaseNameInput</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>数据库主机名</string>
+         </property>
+         <property name="buddy">
+          <cstring>HostNameInput</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>数据库端口号</string>
+         </property>
+         <property name="buddy">
+          <cstring>PortInput</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="PasswordInput"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>数据库用户名</string>
+         </property>
+         <property name="buddy">
+          <cstring>UserNameInput</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>数据库密码</string>
+         </property>
+         <property name="buddy">
+          <cstring>PasswordInput</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="styleSheet">
+            <string notr="true">border-bottom: 2px solid rgb(85, 0, 255);
+margin: 4px 0;
+padding: 8px 0;
+font-size: 20px;
+font-weight: bold;
+border-radius: 0px;
+margin-top: 10px;</string>
+           </property>
+           <property name="text">
+            <string>配置您的 MySQL 服务器</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLedHtml">
+      <property name="whatsThis">
+       <string>用于查询数码管值的 16 进制数据。</string>
+      </property>
+      <attribute name="title">
+       <string>数码管值计算</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>6</number>
+         </property>
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="urlBox">
+           <property name="text">
+            <string>qrc:/led/html/index.html</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="urlGoBtn">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe MDL2 Assets</family>
+            </font>
+           </property>
+           <property name="text">
+            <string></string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="htmlLayout"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabCrc">
+      <property name="whatsThis">
+       <string>CRC 校验码值计算工具。</string>
+      </property>
+      <attribute name="title">
+       <string>校验码计算</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="verticalLayout_8">
+       <property name="spacing">
+        <number>9</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,1,0,0,0">
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item row="3" column="0">
+          <widget class="QTextEdit" name="examineOrigText">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;style&gt;
+* {
+    font-family: &quot;Segoe UI&quot;, &quot;微软雅黑&quot;, sans-serif;
+}
+code {
+    font-family: &quot;Cascadia Code&quot;, Consolas, &quot;Microsoft Yahei UI&quot;, monospace;
+}
+&lt;/style&gt;
+&lt;p&gt;在这里输入你要计算的内容。 &lt;/p&gt;
+&lt;h2&gt;例：&lt;/h2&gt;
+&lt;p&gt;&lt;b&gt;如果原始数据类型为 16 进制（HEX 模式）&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;11 22 33 44 或 0x11 0x22 0x33 或 0x11,0x22,0x33&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;b&gt;如果原始数据类型为基本拉丁文（ASCII 模式）&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;code&gt;Output PWM 3&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QPushButton" name="examineCrcCopyBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>复制(&amp;C)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QPushButton" name="examineCalculateBtn">
+           <property name="text">
+            <string>计算(&amp;A)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2" alignment="Qt::AlignVCenter">
+          <widget class="QLabel" name="label_6">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>校验算法</string>
+           </property>
+           <property name="buddy">
+            <cstring>examineMannerBox</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLineEdit" name="examineCrcText">
+           <property name="whatsThis">
+            <string>这里是计算后的值。</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QComboBox" name="examineMannerBox">
+           <property name="whatsThis">
+            <string>选择一种校验算法。</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_10" stretch="0,0,0">
+           <item>
+            <widget class="QPushButton" name="examineOrigCopyBtn">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>复制(&amp;P)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="examineOrigPasteBtn">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>粘贴(&amp;V)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item alignment="Qt::AlignVCenter">
+            <widget class="QLabel" name="label_8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">margin-top: 5px;</string>
+             </property>
+             <property name="text">
+              <string>原始数据</string>
+             </property>
+             <property name="buddy">
+              <cstring>examineOrigText</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="examineOrigHex">
+             <property name="toolTip">
+              <string>原始数据类型为 16 进制数</string>
+             </property>
+             <property name="whatsThis">
+              <string>原始数据类型为 16 进制数</string>
+             </property>
+             <property name="text">
+              <string>HEX</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="examineOrigAscii">
+             <property name="toolTip">
+              <string>原始数据类型为基本拉丁文字符</string>
+             </property>
+             <property name="whatsThis">
+              <string>原始数据类型为基本拉丁文字符</string>
+             </property>
+             <property name="text">
+              <string>ASCII</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item alignment="Qt::AlignVCenter">
+            <widget class="QLabel" name="label_9">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">margin-top: 5px;</string>
+             </property>
+             <property name="text">
+              <string>CRC 校验码</string>
+             </property>
+             <property name="buddy">
+              <cstring>examineCrcText</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="examineCrcHex">
+             <property name="toolTip">
+              <string>校验码输出为 16 进制数</string>
+             </property>
+             <property name="whatsThis">
+              <string>校验码输出为 16 进制数</string>
+             </property>
+             <property name="text">
+              <string>HEX</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="examineCrcBin">
+             <property name="toolTip">
+              <string>校验码输出为 2 进制数</string>
+             </property>
+             <property name="whatsThis">
+              <string>校验码输出为 2 进制数</string>
+             </property>
+             <property name="text">
+              <string>BIN</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>信息</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <property name="leftMargin">
+           <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>3</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="examineCrcInfo">
+            <property name="whatsThis">
+             <string>这里是当前选中的算法的相关信息。</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">font-family: &quot;Cascadia Code&quot;, &quot;Consolas&quot;, &quot;Microsoft Yahei Mono&quot;, &quot;Microsoft Yahei UI&quot;, monospace;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSkin">
+      <property name="whatsThis">
+       <string>更换软件界面的主题。</string>
+      </property>
+      <attribute name="title">
+       <string>更换主题</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">font-weight: bold;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;双击&lt;/span&gt;主题名称确认选中主题。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="buddy">
+          <cstring>skinList</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,2">
+         <item>
+          <widget class="QListWidget" name="skinList">
+           <property name="toolTip">
+            <string>&lt;style&gt;
+* {
+    font-family: &quot;Segoe UI&quot;, &quot;微软雅黑&quot;, sans-serif;
+}
+&lt;/style&gt;
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;单击&lt;/font&gt;条目只是查看主题的预览图；&lt;br /&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;双击&lt;/font&gt;条目使主题名称字体加粗，才能确认选中该主题。&lt;/b&gt;&lt;/p&gt;</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;style&gt;
+* {
+    font-family: &quot;Segoe UI&quot;, &quot;微软雅黑&quot;, sans-serif;
+}
+&lt;/style&gt;
+&lt;p&gt;选择主题。&lt;/p&gt;
+&lt;h2&gt;注意：&lt;/h2&gt;
+&lt;p&gt;&lt;font color=&quot;red&quot;&gt;单击&lt;/font&gt;主题名称只是查看主题的预览图；&lt;br /&gt;
+&lt;b&gt;&lt;font color=&quot;red&quot;&gt;双击&lt;/font&gt;主题名称使主题名称字体加粗，才表示选中了该主题。&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;选定之后点击“应用”或“确定”来应用主题。&lt;/p&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>262</width>
+              <height>306</height>
+             </rect>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="skinPreview">
+               <property name="whatsThis">
+                <string>选定主题的预览图。</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLog">
+      <property name="whatsThis">
+       <string>查看本次会话所有的消息记录。</string>
+      </property>
+      <attribute name="title">
+       <string>消息记录</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_11">
+       <property name="spacing">
+        <number>9</number>
+       </property>
+       <item>
+        <widget class="QTableWidget" name="logTable">
+         <property name="whatsThis">
+          <string>此处显示本次运行会话消息通信的所有记录。
+
+注意当子程序模式开启之后，此处将会停止记录信息以节约性能。</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="horizontalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::DashLine</enum>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>100</number>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>状态</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>通信方式</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>客户端口</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>时间</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string notr="true">UTF-8</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string notr="true">GBK</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Hex</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QPushButton" name="clearLogBtn">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>清空日志</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSystem">
+      <attribute name="title">
+       <string>账户与系统</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0,0">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,1">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>9</number>
+         </property>
+         <property name="bottomMargin">
+          <number>15</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_18">
+           <property name="minimumSize">
+            <size>
+             <width>64</width>
+             <height>64</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/chatmessage/img/customer_default.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>&lt;style&gt;
+* {font-family: 'Segoe UI', 'Microsoft Yahei UI', sans-serif;}
+&lt;/style&gt;
+&lt;h1&gt;未登录&lt;/h1&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCommandLinkButton" name="resetIniBtn">
+         <property name="toolTip">
+          <string>谨慎使用该选项！</string>
+         </property>
+         <property name="whatsThis">
+          <string>删除程序自动生成的 “desktop.ini” 文件，恢复所有设置为默认值，可能会解决一些不可名状的问题。</string>
+         </property>
+         <property name="text">
+          <string>清除所有个人用户配置</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCommandLinkButton" name="logoutBtn">
+         <property name="toolTip">
+          <string>亦可重新启动本应用程序。</string>
+         </property>
+         <property name="whatsThis">
+          <string>重新启动程序并返回到登录系统界面。</string>
+         </property>
+         <property name="text">
+          <string>退出登录 / 重启应用</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCommandLinkButton" name="exitBtn">
+         <property name="whatsThis">
+          <string>退出程序。</string>
+         </property>
+         <property name="text">
+          <string>退出系统</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCommandLinkButton" name="startSubAppBtn">
+         <property name="toolTip">
+          <string>启动独立子程序可以节约一定的性能。</string>
+         </property>
+         <property name="whatsThis">
+          <string>启动独立子程序可以节约一定的性能。</string>
+         </property>
+         <property name="text">
+          <string>启动独立子程序</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAbout">
+      <attribute name="title">
+       <string>关于</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>677</width>
+            <height>9318</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <property name="topMargin">
+            <number>9</number>
+           </property>
+           <property name="rightMargin">
+            <number>9</number>
+           </property>
+           <property name="bottomMargin">
+            <number>9</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1">
+             <property name="spacing">
+              <number>6</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>110</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>156</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">image: url(:/img/408logo.png);</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>&lt;style&gt;
+* {font-family: 'Segoe UI', 'Microsoft Yahei UI', sans-serif;}
+&lt;/style&gt;
+&lt;h1&gt;破濒科技上位机&lt;/h1&gt;
+&lt;h3&gt;创作于破濒科技 408 电子工作室&lt;/h3&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCommandLinkButton" name="getHelpBtn">
+             <property name="toolTip">
+              <string>打开随文件附带的帮助文件（如果有）</string>
+             </property>
+             <property name="whatsThis">
+              <string>仅在软件同目录下有对应的帮助文件才能打开帮助。</string>
+             </property>
+             <property name="text">
+              <string>获取帮助</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCommandLinkButton" name="aboutQtBtn">
+             <property name="whatsThis">
+              <string>运行环境配置信息。</string>
+             </property>
+             <property name="text">
+              <string>关于 QT</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="aboutLbl">
+             <property name="text">
+              <string>&lt;html&gt;&lt;head&gt;
+&lt;style&gt;
+* {font-family: 'Segoe UI', 'Microsoft Yahei UI', sans-serif;}
+a {color: rgb(37,154,233);}
+.expand {background-color: red;height: 1024px;}
+&lt;/style&gt;
+&lt;head/&gt;&lt;body&gt;
+&lt;p&gt;项目启动时间：‎2021 ‎年 ‎4 ‎月 ‎11 ‎日
+&lt;p&gt;制作：我也不知道是谁&lt;br /&gt;
+总监：石洋铭、宋余君&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;使用的开源项目&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.qt.io/&quot;&gt;QT 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.qcustomplot.com/&quot;&gt;QCustomPlot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ShaShiDiZhuanLan/Demo_MessageChat_Qt&quot;&gt;Demo_MessageChat&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sourceforge.net/projects/qsseditor/&quot;&gt;QSS Editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer&quot;&gt;Process Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://enigmaprotector.com/en/downloads.html&quot;&gt;Enigma Virtual Box&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;使用的主题&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/ColinDuquesnoy/QDarkStyleSheet/blob/master/qdarkstyle/dark/style.qss&quot;&gt;QDarkStyle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/yebufan/article/details/5875614&quot;&gt;一个值得借鉴的QSS样式&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;h3&gt;高雅画廊&lt;/h3&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignJustify|Qt::AlignTop</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Preferred</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>2048</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/tjb_img1.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>2048</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/tjb_img2.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>2048</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/tjb_img3.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>2048</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/tjb_img4.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>30</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>- 已经到底了 -</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <property name="leftMargin">
+      <number>9</number>
+     </property>
+     <property name="topMargin">
+      <number>9</number>
+     </property>
+     <property name="rightMargin">
+      <number>9</number>
+     </property>
+     <property name="bottomMargin">
+      <number>9</number>
+     </property>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="whatsThis">
+        <string>我就知道你一定会点击这里。</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tabSetting</tabstop>
+  <tabstop>HostNameInput</tabstop>
+  <tabstop>PortInput</tabstop>
+  <tabstop>UserNameInput</tabstop>
+  <tabstop>PasswordInput</tabstop>
+  <tabstop>DatabaseNameInput</tabstop>
+  <tabstop>urlBox</tabstop>
+  <tabstop>urlGoBtn</tabstop>
+  <tabstop>examineMannerBox</tabstop>
+  <tabstop>examineOrigText</tabstop>
+  <tabstop>examineOrigPasteBtn</tabstop>
+  <tabstop>examineOrigCopyBtn</tabstop>
+  <tabstop>examineCrcText</tabstop>
+  <tabstop>examineCrcCopyBtn</tabstop>
+  <tabstop>skinList</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>exitBtn</tabstop>
+  <tabstop>logoutBtn</tabstop>
+  <tabstop>resetIniBtn</tabstop>
+  <tabstop>aboutQtBtn</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>examineCrcHex</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examineCalculateBtn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>398</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>examineCrcBin</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>examineCalculateBtn</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>447</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>240</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

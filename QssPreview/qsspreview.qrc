@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/qss/preview">
+        <file>ClassicVista.png</file>
+        <file>None.png</file>
+        <file>QDarkStyle.png</file>
+        <file>QLightStyle.png</file>
+    </qresource>
+</RCC>

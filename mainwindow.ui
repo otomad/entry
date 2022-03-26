@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>破濒科技上位机</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabWave">
+         <attribute name="title">
+          <string>示波器</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,0">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QCustomPlot" name="qcp" native="true"/>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0,0,1,1,1,0,0,1,1,0" columnstretch="0,1,0" rowminimumheight="0,0,20,0,0,0,0,20,0,0,0" columnminimumwidth="30,0,0">
+            <property name="topMargin">
+             <number>9</number>
+            </property>
+            <property name="bottomMargin">
+             <number>9</number>
+            </property>
+            <item row="1" column="0" colspan="3">
+             <widget class="QPushButton" name="showNowBtn">
+              <property name="text">
+               <string>查看最新数据</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>A</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>电压</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="2">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>W</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>功率</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLCDNumber" name="lcdW">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="digitCount">
+               <number>5</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="3">
+             <widget class="QPushButton" name="setVA">
+              <property name="text">
+               <string>设定</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>电流</string>
+              </property>
+              <property name="buddy">
+               <cstring>setABox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="2">
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>V</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>电压</string>
+              </property>
+              <property name="buddy">
+               <cstring>setVBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLCDNumber" name="lcdA">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="digitCount">
+               <number>5</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>电流</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLCDNumber" name="lcdV">
+              <property name="minimumSize">
+               <size>
+                <width>70</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="digitCount">
+               <number>5</number>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0" colspan="3">
+             <widget class="QLabel" name="label_15">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>设定参数</string>
+              </property>
+              <property name="buddy">
+               <cstring>setVA</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0" colspan="3">
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="3">
+             <widget class="QLabel" name="label_11">
+              <property name="styleSheet">
+               <string notr="true">font-weight: bold;</string>
+              </property>
+              <property name="text">
+               <string>当前参数</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="3">
+             <widget class="QDateTimeEdit" name="dateTimeEdit"/>
+            </item>
+            <item row="8" column="1" colspan="2">
+             <widget class="QDoubleSpinBox" name="setABox">
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="suffix">
+               <string> A</string>
+              </property>
+              <property name="maximum">
+               <double>10.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="1" colspan="2">
+             <widget class="QDoubleSpinBox" name="setVBox">
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="suffix">
+               <string> V</string>
+              </property>
+              <property name="maximum">
+               <double>25.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="rightMargin">
+         <number>9</number>
+        </property>
+        <property name="bottomMargin">
+         <number>9</number>
+        </property>
+        <item>
+         <widget class="QTabWidget" name="tabConnect">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="connectWithSerial">
+           <attribute name="title">
+            <string>串口</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_3" columnstretch="0,1" columnminimumwidth="0,120">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>9</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>9</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>串口号</string>
+              </property>
+              <property name="buddy">
+               <cstring>portNameBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>数据位</string>
+              </property>
+              <property name="buddy">
+               <cstring>dataBitsBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>停止位</string>
+              </property>
+              <property name="buddy">
+               <cstring>stopBitsBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>波特率</string>
+              </property>
+              <property name="buddy">
+               <cstring>baudrateBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>校验位</string>
+              </property>
+              <property name="buddy">
+               <cstring>ParityBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="portNameBox">
+              <property name="minimumSize">
+               <size>
+                <width>72</width>
+                <height>0</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QComboBox" name="baudrateBox">
+              <property name="minimumSize">
+               <size>
+                <width>72</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="currentText">
+               <string>1382400</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>1382400</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>921600</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>460800</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>256000</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>230400</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>128000</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>115200</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>76800</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>57600</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>43000</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>38400</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>19200</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>14400</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>9600</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4800</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2400</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>1200</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QComboBox" name="dataBitsBox">
+              <property name="minimumSize">
+               <size>
+                <width>72</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="currentText">
+               <string>8</string>
+              </property>
+              <item>
+               <property name="text">
+                <string notr="true">8</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">7</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">6</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">5</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="7" column="1">
+             <widget class="QComboBox" name="ParityBox">
+              <property name="minimumSize">
+               <size>
+                <width>72</width>
+                <height>0</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string>无</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>奇校验</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>偶校验</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="8" column="1">
+             <widget class="QComboBox" name="stopBitsBox">
+              <property name="minimumSize">
+               <size>
+                <width>72</width>
+                <height>0</height>
+               </size>
+              </property>
+              <item>
+               <property name="text">
+                <string notr="true">1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">1.5</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">2</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="10" column="0" colspan="2">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>48</width>
+                <height>136</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="11" column="0" colspan="2">
+             <widget class="QPushButton" name="checkSerial">
+              <property name="text">
+               <string>检测串口</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="connectWithWlan">
+           <attribute name="title">
+            <string>局域网</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,0">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>9</number>
+            </property>
+            <item row="1" column="0" colspan="2">
+             <widget class="QRadioButton" name="asClientRadio">
+              <property name="text">
+               <string>作为客户端</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0" colspan="2">
+             <widget class="QLabel" name="asServerIpInfo">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-top: 0.5em;</string>
+              </property>
+              <property name="text">
+               <string>将 “服务器 IP” 设置为空，则会自动分配 IP 地址，默认为本机的 IP 地址。</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QRadioButton" name="asServerRadio">
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="text">
+               <string>作为服务端</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="Line" name="line_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0" colspan="2">
+             <spacer name="verticalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>服务器端口</string>
+              </property>
+              <property name="buddy">
+               <cstring>serverPortBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>服务器 IP</string>
+              </property>
+              <property name="buddy">
+               <cstring>serverIpBox</cstring>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QLineEdit" name="serverIpBox"/>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="serverPortBox">
+              <property name="text">
+               <string>8888</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="showClientsBtn">
+          <property name="text">
+           <string>显示已连接的客户端</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1">
+          <item>
+           <widget class="QPushButton" name="openSerial">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>开始连接</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="windowTitle">
+    <string>图表导航</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Segoe MDL2 Assets&quot;, &quot;Segoe UI&quot;, &quot;Microsoft Yahei UI&quot;;</string>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllToolBarAreas</set>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonIconOnly</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="leftMove"/>
+   <addaction name="rightMove"/>
+   <addaction name="xZoomIn"/>
+   <addaction name="xZoomOut"/>
+   <addaction name="separator"/>
+   <addaction name="autoZoom"/>
+   <addaction name="separator"/>
+   <addaction name="upMove"/>
+   <addaction name="downMove"/>
+   <addaction name="yZoomIn"/>
+   <addaction name="yZoomOut"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar_normal">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>工具</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-family: &quot;Segoe MDL2 Assets&quot;, &quot;Segoe UI&quot;, &quot;Microsoft Yahei UI&quot;;</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSetting"/>
+   <addaction name="actionExit"/>
+   <addaction name="actionPlaceHolder"/>
+  </widget>
+  <action name="leftMove">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>左移 (←)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="rightMove">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>右移 (→)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="xZoomIn">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>X 轴放大 (Ctrl+=)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="xZoomOut">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>X 轴缩小 (Ctrl+-)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="upMove">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>上移 (↑)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="downMove">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>下移 (↓)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="yZoomIn">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>Y 轴放大 (Alt+=)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+=</string>
+   </property>
+  </action>
+  <action name="yZoomOut">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>Y 轴缩小 (Alt+-)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+-</string>
+   </property>
+  </action>
+  <action name="autoZoom">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>缩放为适合 (Alt+A)</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe MDL2 Assets</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>退出 (Alt+F4)</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="toolTip">
+    <string>设置 (Alt+S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="actionPlaceHolder">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>ﾠ</string>
+   </property>
+   <property name="toolTip">
+    <string>‪</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>showNowBtn</tabstop>
+  <tabstop>setABox</tabstop>
+  <tabstop>setVBox</tabstop>
+  <tabstop>setVA</tabstop>
+  <tabstop>tabConnect</tabstop>
+  <tabstop>portNameBox</tabstop>
+  <tabstop>baudrateBox</tabstop>
+  <tabstop>dataBitsBox</tabstop>
+  <tabstop>ParityBox</tabstop>
+  <tabstop>stopBitsBox</tabstop>
+  <tabstop>checkSerial</tabstop>
+  <tabstop>asServerRadio</tabstop>
+  <tabstop>asClientRadio</tabstop>
+  <tabstop>serverIpBox</tabstop>
+  <tabstop>serverPortBox</tabstop>
+  <tabstop>openSerial</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>asServerRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>asServerIpInfo</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>824</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>asServerRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>showClientsBtn</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>824</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>824</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
